@@ -10,6 +10,6 @@ import java.util.Date;
 public class HelloController {
     @RequestMapping("/")
     public String hello(String name){
-        return "Hello,"+name+" "+new Date();
+        return "Hello "+name+",当前时间： "+new Date();
     }
 }
