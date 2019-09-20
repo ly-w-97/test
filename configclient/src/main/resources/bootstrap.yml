@@ -1,0 +1,26 @@
+server:
+  port: 13000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8101/eureka/
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+spring:
+  application:
+    name: config-git
+  cloud:
+    config:
+      uri: http://localhost:12000 # 配置中心的具体地址，即 config-server
+      name: config-client # 对应 {application} 部分
+      profile: dev # 对应 {profile} 部分
+      label: master
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

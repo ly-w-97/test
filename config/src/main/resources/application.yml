@@ -1,13 +1,32 @@
 spring:
   application:
     name: config-server
+  profiles:
+    active: dev
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/ly-w-97/test.git # 配置git仓库的地址
-          search-paths: test/config-repo # git仓库地址下的相对地址，可以配置多个，用,分割。
+          uri: https://github.com/ly-w-97/test.git
+          search-paths: config-repo
           username: 1250908570@qq.com
           password: Ly_591469958
+          proxy:
+            https:
+              host: proxy2.xn.petrochina
+              port: 8080
+
+        native:
+          default-label: master
+      label: master
 server:
   port: 12000
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8101/eureka/
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
