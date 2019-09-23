@@ -16,12 +16,15 @@ spring:
             https:
               host: proxy2.xn.petrochina
               port: 8080
-
         native:
           default-label: master
       label: master
+    bus:
+      enabled: true
+      trace:
+        enabled: true
 server:
-  port: 12000
+  port: 12001
 eureka:
   client:
     serviceUrl:
@@ -30,4 +33,8 @@ eureka:
     hostname: localhost
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

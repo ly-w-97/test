@@ -9,10 +9,22 @@ eureka:
     hostname: localhost
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+  health:
+    rabbit:
+      enabled: false
 spring:
   application:
-    name: config-git
+    name: config-client
   cloud:
+    bus:
+      trace:
+        enabled: true
+      enabled: true
     config:
       name: config-client # 对应 {application} 部分
       profile: dev # 对应 {profile} 部分
@@ -20,8 +32,3 @@ spring:
       discovery:
         enabled: true
         service-id: config-server
-management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh
