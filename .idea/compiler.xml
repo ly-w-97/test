@@ -10,6 +10,7 @@
         <module name="config" />
         <module name="configclient" />
         <module name="consumer" />
+        <module name="gateway" />
         <module name="producer" />
         <module name="register" />
         <module name="trace-a" />
@@ -21,6 +22,7 @@
       <module name="config" target="1.8" />
       <module name="configclient" target="1.8" />
       <module name="consumer" target="1.8" />
+      <module name="gateway" target="1.8" />
       <module name="producer" target="1.8" />
       <module name="register" target="1.8" />
       <module name="trace-a" target="1.8" />
@@ -33,6 +35,7 @@
       <module name="config" options="-parameters" />
       <module name="configclient" options="-parameters" />
       <module name="consumer" options="-parameters" />
+      <module name="gateway" options="-parameters" />
       <module name="producer" options="-parameters" />
       <module name="register" options="-parameters" />
       <module name="trace-a" options="-parameters" />
