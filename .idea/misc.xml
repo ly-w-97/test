@@ -12,6 +12,8 @@
         <option value="$PROJECT_DIR$/config/pom.xml" />
         <option value="$PROJECT_DIR$/configclient/pom.xml" />
         <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/trace-a/pom.xml" />
+        <option value="$PROJECT_DIR$/trace-b/pom.xml" />
       </list>
     </option>
   </component>
