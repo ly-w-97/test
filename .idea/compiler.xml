@@ -2,29 +2,32 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="api-gateway" />
+        <module name="client" />
         <module name="config" />
         <module name="configclient" />
-        <module name="consumer" />
+        <module name="dala" />
         <module name="gateway" />
         <module name="producer" />
         <module name="register" />
-        <module name="trace-a" />
-        <module name="trace-b" />
+        <module name="test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="api-gateway" target="1.8" />
+      <module name="client" target="1.5" />
       <module name="config" target="1.8" />
       <module name="configclient" target="1.8" />
       <module name="consumer" target="1.8" />
+      <module name="dala" target="1.8" />
       <module name="gateway" target="1.8" />
       <module name="producer" target="1.8" />
       <module name="register" target="1.8" />
+      <module name="test" target="1.5" />
       <module name="trace-a" target="1.8" />
       <module name="trace-b" target="1.8" />
     </bytecodeTargetLevel>
@@ -32,9 +35,11 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
+      <module name="client" options="" />
       <module name="config" options="-parameters" />
       <module name="configclient" options="-parameters" />
       <module name="consumer" options="-parameters" />
+      <module name="dala" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="producer" options="-parameters" />
       <module name="register" options="-parameters" />
